@@ -1,0 +1,87 @@
+.uk-text-lighter {
+    font-weight: 500;
+}
+
+.uk-text-bold {
+    font-weight: 700;
+}
+
+.uk-text-bolder {
+    font-weight: 900;
+}
+
+.uk-border-rounded,
+.uk-card {
+    border-radius: var(--Radius20);
+}
+
+.uk-text-emphasis,
+.uk-button-link {
+    color: black !important;
+}
+
+.uk-text-primary {
+    color: #41445c !important;
+}
+
+.uk-text-small {
+    font-size: 75%;
+}
+
+.uk-navbar-nav>li>a {
+    font-size: 1rem;
+    text-transform: none;
+    color: #ababab;
+}
+
+.uk-navbar-nav>li:hover>a,
+.uk-navbar-nav>li>a.uk-open,
+.uk-navbar-nav>li>a:focus {
+    color: black;
+}
+
+.uk-overlay-primary {
+    background: rgba(65, 68, 92, 0.75);
+}
+
+.uk-card-default,
+.uk-card-primary,
+.uk-card-secondary {
+    box-shadow: none;
+}
+
+.uk-background-secondary,
+.uk-card-secondary {
+    background: var(--ColorSecondary);
+}
+
+.uk-card-primary {
+    background: #cbcbd0;
+}
+
+.uk-badge {
+    color: #fff !important;
+    text-transform: none !important;
+    display: inline-flex !important;
+    padding: 14px;
+    border-radius: 7px;
+}
+
+.uk-modal-header {
+    background: transparent;
+    border-bottom: none;
+}
+
+.uk-close,
+.uk-close:focus,
+.uk-close:hover {
+    color: white;
+}
+
+.uk-offcanvas-bar .uk-nav > li {
+    padding: 5px 0;
+}
+
+.uk-offcanvas-bar .uk-nav > li > a {
+    padding: 0;
+}

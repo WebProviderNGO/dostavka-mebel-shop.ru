@@ -1,0 +1,35 @@
+@media (min-width:300px) {
+    .uk-h1 {
+        font-size: 2rem;
+    }
+
+    .BlockH4 {
+        font-size: 1.5rem;
+    }
+
+    .CardInfo .uk-card-title,
+    .AboutCard .uk-card-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:640px) {
+    .uk-h1 {
+        font-size: 4rem;
+    }
+
+    .BlockH4 {
+        font-size: 2rem;
+    }
+
+    .CardInfo .uk-card-title,
+    .AboutCard .uk-card-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:960px) {}
+
+@media (min-width:1200px) {}
+
+@media (min-width:1600px) {}

@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Все в дом</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/uikit@3.6.14/dist/css/uikit.min.css">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- <script async src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script> -->
+    <!-- <script async src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+</head>
+
+<body>
+    <div class="uk-container uk-container-expand">
+
+        <header class="uk-flex-middle uk-margin-medium-top uk-margin-medium-bottom uk-visible@m" uk-grid>
+            <div class="Logo uk-width-auto">
+                <h1 class="uk-margin-small-bottom uk-text-bold">Все в дом</h1>
+                <h2 class="uk-margin-remove-top uk-text-muted">Магазин мебели</h2>
+            </div>
+            <div class="uk-width-expand">
+                <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+                    <div class="uk-navbar-left uk-visible@m">
+                        <ul class="uk-navbar-nav">
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Акции</a></li>
+                            <li><a href="">Оплата</a></li>
+                            <li><a href="">Доставка</a></li>
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="uk-width-auto uk-visible@xl">
+                <ion-icon class="uk-h4 uk-margin-remove-bottom" name="flag"></ion-icon>
+                <span>г. Пенза, ул. Ватутина, 105а</span>
+            </div>
+            <div class="uk-width-auto uk-visible@xl">
+                <ion-icon class="uk-h4 uk-margin-remove-bottom" name="call"></ion-icon>
+                <a href="tel:+74812390987"
+                    class="uk-h4 uk-margin-remove-top uk-margin-remove-bottom uk-text-bolder uk-link-reset">+7 (4812)
+                    39-09-87</a>
+            </div>
+            <div class="uk-width-auto uk-visible@s">
+                <div class="uk-inline">
+                    <button class="uk-button uk-button-link uk-text-muted">
+                        <ion-icon name="more" size="large"></ion-icon>
+                    </button>
+                    <div uk-drop="mode: click">
+                        <div class="TopDrop uk-card uk-card-body uk-background-secondary uk-light">
+                            <h3 class="uk-h2 uk-text-bold">Контакты</h3>
+                            <div class="uk-margin-small-bottom">г. Пенза, ул. Ватутина, 105а</div>
+                            <a href="tel:+74812390987"
+                                class="uk-h4 uk-margin-remove-top uk-margin-remove-bottom uk-text-bolder uk-link-reset WText">+7
+                                (4812)
+                                39-09-87</a>
+                            <div class="uk-margin-medium-top uk-text-center">
+                                <a class="uk-button uk-button-default TWButton" href="#ContactModal" uk-toggle>Заказать
+                                    звонок</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="uk-child-width-auto uk-flex-center uk-margin-medium-top uk-margin-medium-bottom uk-hidden@m"
+            uk-grid>
+            <div>
+                <ul class="uk-subnav" uk-margin>
+                    <li>
+                        <button class="uk-button uk-button-link" uk-toggle="target: #SearchOffcanvas">
+                            <ion-icon name="search" size="large"></ion-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="uk-button uk-button-link" uk-toggle="target: #UserOffcanvas">
+                            <ion-icon name="contact" size="large"></ion-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="uk-button uk-button-link">
+                            <ion-icon name="cart" size="large"></ion-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="uk-button uk-button-link">
+                            <ion-icon name="call" size="large"></ion-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="uk-button uk-button-link" uk-toggle="target: #CatalogOffcanvas">
+                            <ion-icon name="menu" size="large"></ion-icon>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="Logo uk-text-center">
+                <h1 class="uk-margin-small-bottom uk-text-bold">Все в дом</h1>
+                <h2 class="uk-margin-remove-top uk-text-muted">Магазин мебели</h2>
+            </div>
+        </div>
+
+        <div id="ContactModal" uk-modal>
+            <div class="uk-modal-dialog uk-width-large uk-padding-small uk-background-secondary uk-border-rounded">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title uk-text-bold WText">Заказать звонок</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <div class="uk-margin">
+                        <input class="uk-input TInput" type="text" placeholder="Имя">
+                    </div>
+                    <div class="uk-margin">
+                        <input class="uk-input TInput" type="text" placeholder="Телефон">
+                    </div>
+                    <div class="uk-margin">
+                        <button class="uk-button uk-button-default TWButton" href="#">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="CatalogOffcanvas" uk-offcanvas="mode: push; overlay: true">
+            <div class="uk-offcanvas-bar uk-background-secondary">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Каталог</h3>
+                <ul class="uk-nav uk-nav-default">
+                    <li>
+                        <a class="uk-button uk-button-default TWButton" href="#">Хранение и порядок</a>
+                    </li>
+                    <li>
+                        <a class="uk-button uk-button-default TWButton" href="#">Мебель</a>
+                    </li>
+                    <li>
+                        <a class="uk-button uk-button-default TWButton" href="#">Кровати и матрасы</a>
+                    </li>
+                    <li>
+                        <a class="uk-button uk-button-default TWButton" href="#">Кухня и бытовая техника</a>
+                    </li>
+                    <li>
+                        <a class="uk-button uk-button-default TWButton" href="#">Текстиль для дома</a>
+                    </li>
+                </ul>
+                <ul class="CatalogOffcanvas-MainMenu uk-padding uk-margin-small-top uk-nav uk-nav-default uk-hidden@m">
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Оплата</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Отзывы</a></li>
+                    <li><a href="">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="SearchOffcanvas" uk-offcanvas="mode: push; overlay: true">
+            <div class="uk-offcanvas-bar uk-background-secondary">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Поиск</h3>
+                <div class="uk-inline">
+                    <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: search"></a>
+                    <input class="uk-input TInput" type="text" placeholder="Текст для поиска">
+                </div>
+            </div>
+        </div>
+        <div id="UserOffcanvas" uk-offcanvas="mode: push; overlay: true">
+            <div class="uk-offcanvas-bar uk-background-secondary">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Личный кабинет</h3>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" type="text" placeholder="Логин">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                        <input class="uk-input" type="text" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-default TWButton" href="#">Войти</button>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-default TBButton" href="#">Регистрация</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid-collapse uk-flex-center" uk-grid>
+            <div class="uk-width-small uk-visible@s">
+                <div class="uk-text-center" style="position: fixed;">
+                    <div class="uk-padding-small uk-padding-remove-left uk-padding-remove-right">
+                        <div class="uk-padding-small">
+                            <button class="uk-button uk-button-link" uk-toggle="target: #CatalogOffcanvas">
+                                <ion-icon name="menu" size="large"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="uk-padding-small uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right">
+                        <div class="uk-padding-small">
+                            <button class="uk-button uk-button-link" uk-toggle="target: #SearchOffcanvas">
+                                <ion-icon name="search" size="large"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="uk-padding-small uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right">
+                        <div class="uk-padding-small uk-background-default uk-border-rounded">
+                            <span class="uk-text-small">0</span>
+                            <button class="uk-button uk-button-link">
+                                <ion-icon name="cart" size="large"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="uk-padding-small uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right">
+                        <div class="uk-padding-small">
+                            <button class="uk-button uk-button-link" uk-toggle="target: #UserOffcanvas">
+                                <ion-icon name="contact" size="large"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                    <a href="#" uk-totop uk-scroll></a>
+                </div>
+            </div>
+            <div class="uk-width-expand">
+
+                <div uk-grid>
+                    <div class="uk-width-1-1@l uk-width-3-4@xl">
+                        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+                            uk-slideshow="max-height: 615">
+
+                            <ul class="uk-slideshow-items">
+                                <li class="uk-border-rounded">
+                                    <img class="uk-border-rounded" src="content/banner/315485019.jpg" alt="" uk-cover>
+                                </li>
+                                <li class="uk-border-rounded">
+                                    <img class="uk-border-rounded" src="content/banner/315485014.jpg" alt="" uk-cover>
+                                </li>
+                            </ul>
+
+                            <div class="uk-position-bottom-center uk-position-small uk-visible@s">
+                                <ul class="uk-thumbnav">
+                                    <li uk-slideshow-item="0"><a href="#"><img src="content/banner/315485019.jpg"
+                                                width="150" alt=""></a></li>
+                                    <li uk-slideshow-item="1"><a href="#"><img src="content/banner/315485014.jpg"
+                                                width="150" alt=""></a></li>
+                                </ul>
+                            </div>
+
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-previous uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-next uk-slideshow-item="next"></a>
+
+                        </div>
+                    </div>
+                    <div class="uk-width-expand">
+                        <div class="uk-child-width-1-2@m uk-child-width-1-1@xl" uk-grid>
+                            <div>
+                                <div class="uk-inline">
+                                    <img class="uk-border-rounded" src="content/banner/215141149.jpg" alt="">
+                                    <div class="uk-position-top-left uk-overlay">
+                                        <h4 class="uk-text-bolder WText BlockH4">Лучшая цена!</h4>
+                                    </div>
+                                    <div class="uk-position-bottom-left uk-overlay">
+                                        <a class="uk-button uk-button-default SecondaryButton" href="#">00 000₽</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="uk-inline">
+                                        <img class="uk-border-rounded" src="content/banner/2151411492.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Скидки 15%</h4>
+                                        </div>
+                                        <div class="uk-position-bottom-right uk-overlay">
+                                            <a class="uk-button uk-button-default uk-link-reset TWButton"
+                                                href="#">Смотреть<ion-icon class="uk-margin-small-left"
+                                                    name="arrow-round-forward"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-margin-medium-top uk-margin-medium-bottom" uk-grid uk-height-match>
+                    <div class="uk-width-1-1@l uk-width-1-4@xl uk-visible@s">
+                        <div class="uk-background-secondary uk-light uk-padding uk-border-rounded">
+                            <ul class="uk-subnav" uk-margin>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Стулья</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Детская</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кресла</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кухни</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Зеркала</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Столы</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кровати</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Спальня</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Стулья</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Детская</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кресла</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кухни</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Зеркала</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Столы</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кровати</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Спальня</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Зеркала</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Столы</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кровати</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Спальня</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Кровати</a></li>
+                                <li><a class="uk-button uk-button-default TWButton" href="#">Спальня</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-width-3-4@xl">
+                        <div uk-grid>
+                            <div class="BannerProduct uk-width-1-3@m">
+                                <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                                    <a href="">
+                                        <img class="uk-transition-scale-up uk-transition-opaque"
+                                            src="content/block/215141131.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <small>00</small>
+                                        </div>
+                                        <div class="uk-position-bottom-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Хранение и порядок</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="BannerProduct uk-width-2-3@m">
+                                <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                                    <a href="">
+                                        <img class="uk-transition-scale-up uk-transition-opaque"
+                                            src="content/block/215141132.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <small>00</small>
+                                        </div>
+                                        <div class="uk-position-bottom-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Мебель</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-child-width-1-3@m" uk-grid>
+                            <div class="BannerProduct">
+                                <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                                    <a href="">
+                                        <img class="uk-transition-scale-up uk-transition-opaque"
+                                            src="content/block/215141120.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <small>00</small>
+                                        </div>
+                                        <div class="uk-position-bottom-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Кровати и матрасы</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="BannerProduct">
+                                <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                                    <a href="">
+                                        <img class="uk-transition-scale-up uk-transition-opaque"
+                                            src="content/block/215141122.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <small>00</small>
+                                        </div>
+                                        <div class="uk-position-bottom-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Кухня и бытовая техника</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="BannerProduct">
+                                <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                                    <a href="">
+                                        <img class="uk-transition-scale-up uk-transition-opaque"
+                                            src="content/block/215141125.jpg" alt="">
+                                        <div class="uk-position-top-left uk-overlay">
+                                            <small>00</small>
+                                        </div>
+                                        <div class="uk-position-bottom-left uk-overlay">
+                                            <h4 class="uk-text-bolder WText BlockH4">Текстиль для дома</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div uk-slider>
+                    <div class="HomeH2 uk-flex-middle uk-padding-large uk-padding-remove-left uk-padding-remove-right"
+                        uk-grid>
+                        <div class="uk-width-expand">
+                            <h2 class="uk-h1 uk-text-bolder">Самое популярное</h2>
+                        </div>
+                        <div class="uk-width-auto uk-visible@m">
+                            <div class="HomeH2Slidenav uk-background-secondary">
+                                <button uk-slidenav-previous uk-slider-item="previous"></button>
+                                <button uk-slidenav-next uk-slider-item="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-remove-top"
+                        uk-grid>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="SaleBadge uk-badge">Распродажа</span></li>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545444.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545444.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545444.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>На заказ
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545444.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>На заказ
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545444.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>На заказ
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div uk-slider>
+                    <div class="HomeH2 uk-flex-middle uk-padding-large uk-padding-remove-left uk-padding-remove-right"
+                        uk-grid>
+                        <div class="uk-width-expand">
+                            <h2 class="uk-h1 uk-text-bolder">Новинки</h2>
+                        </div>
+                        <div class="uk-width-auto uk-visible@m">
+                            <div class="HomeH2Slidenav uk-background-secondary">
+                                <button uk-slidenav-previous uk-slider-item="previous"></button>
+                                <button uk-slidenav-next uk-slider-item="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-remove-top"
+                        uk-grid>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545569.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545569.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545569.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545569.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="ProductCard uk-card uk-card-default">
+                                <ul class="ProductCardBadge uk-subnav" uk-margin>
+                                    <li><span class="NewBadge uk-badge">Новинка</span></li>
+                                </ul>
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img src="content/item/545569.jpg" alt="">
+                                    <div class="uk-transition-fade">
+                                        <a href="">
+                                            <div class="uk-overlay-primary uk-position-cover"></div>
+                                        </a>
+                                    </div>
+                                    <div class="uk-position-center uk-visible@l">
+                                        <div class="uk-transition-fade">
+                                            <button
+                                                class="uk-button uk-button-link uk-padding-small uk-background-default uk-border-rounded">
+                                                <ion-icon name="cart" size="large"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ProductCardBorderradius">
+                                    <div class="uk-card-header uk-padding-remove-bottom">
+                                        <h3 class="uk-card-title uk-margin-remove-bottom uk-text-lighter">Название
+                                            товара
+                                        </h3>
+                                        <p class="uk-text-small uk-margin-remove-top">Артикул: 000000</p>
+                                    </div>
+                                    <div class="uk-card-body">
+                                        <div class="ProductCardNumber uk-grid-collapse uk-flex-middle" uk-grid>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"
+                                                style="border-radius: 8px 0 0 8px;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="remove"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div class="uk-width-auto uk-padding-small uk-background-muted"><input
+                                                    class="uk-input uk-text-center" type="text" value="1"></div>
+                                            <div class="uk-width-auto  uk-padding-small uk-background-muted"
+                                                style="border-radius: 0 8px 8px 0;">
+                                                <button class="uk-button uk-button-link uk-background-default">
+                                                    <ion-icon name="add"></ion-icon>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="uk-card-footer uk-padding-remove-top uk-padding-remove-bottom uk-border">
+                                        <div class="uk-child-width-1-2 uk-child-width-1-1@l uk-child-width-1-2@xl uk-flex-middle"
+                                            uk-grid>
+                                            <div><span class="uk-text-bold uk-text-large">00 000₽</span></div>
+                                            <div class="uk-hidden@l">
+                                                <button class="uk-button uk-button-link uk-float-right">
+                                                    <ion-icon name="cart" size="large"></ion-icon>
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <span class="uk-badge YesBadge">
+                                                    <ion-icon name="checkmark-circle"></ion-icon>В наличии
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-child-width-1-2@xl uk-padding-large uk-padding-remove-left uk-padding-remove-right"
+                    uk-grid>
+                    <div>
+                        <div class="CardInfo uk-card uk-card-secondary uk-card-body uk-padding-remove-top uk-padding-remove-bottom"
+                            style="background-image: url(content/block/b_1.png); box-shadow: 0 14px 25px rgba(0,0,0,0.16);">
+                            <div class="uk-position-top-left uk-overlay">
+                                <h3 class="uk-card-title uk-text-bolder">Предзаказ мебели</h3>
+                            </div>
+                            <div class="uk-position-bottom-left uk-overlay">
+                                <a class="uk-button uk-button-default TWButton" href="#">В каталог<ion-icon
+                                        class="uk-margin-small-left" name="arrow-round-forward"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="uk-position-bottom-right uk-overlay">
+                                <span class="SaleBadge uk-badge Xbadge uk-text-bold">Скидка 15%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="CardInfo uk-card uk-card-primary uk-card-body uk-padding-remove-top uk-padding-remove-bottom"
+                            style="background-image: url(content/block/b_2.png);">
+                            <div class="uk-position-top-left uk-overlay">
+                                <h3 class="uk-card-title uk-text-bolder">Купить сейчас!</h3>
+                            </div>
+                            <div class="uk-position-bottom-left uk-overlay">
+                                <a class="uk-button uk-button-default TWButton" href="#">В каталог<ion-icon
+                                        class="uk-margin-small-left" name="arrow-round-forward"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-child-width-1-12 uk-margin-remove-top" uk-grid>
+                    <div>
+                        <div class="CardInfo uk-card uk-card-secondary uk-card-body uk-padding-remove-top uk-padding-remove-bottom"
+                            style="background-image: url(content/block/question_form.png); box-shadow: 0 14px 25px rgba(0,0,0,0.16);">
+                            <div class="uk-position-center uk-overlay uk-text-center">
+                                <h3 class="uk-card-title uk-text-bolder">Остались вопросы?<a
+                                        class="uk-button uk-button-default TWButton uk-margin-medium-left"
+                                        href="#">Напишите нам</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-child-width-1-2@m uk-padding-large uk-padding-remove-left uk-padding-remove-right"
+                    uk-grid uk-height-match="target: > div > .uk-card">
+                    <div>
+                        <div class="AboutCard uk-card uk-card-default uk-card-body">
+                            <h3 class="uk-card-title uk-text-bold uk-margin-medium-bottom">О компании</h3>
+                            <p class="uk-text-emphasis">Безусловно, выбранный нами инновационный путь создаёт
+                                необходимость включения в
+                                производственный план целого ряда внеочередных мероприятий с учётом комплекса укрепления
+                                моральных ценностей. Приятно, граждане, наблюдать, как представители современных
+                                социальных резервов лишь добавляют фракционных разногласий и объективно рассмотрены
+                                соответствующими инстанциями. Элементы политического процесса неоднозначны и будут
+                                своевременно верифицированы.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="AboutCard uk-card uk-card-default uk-card-body">
+                            <h3 class="uk-card-title uk-text-bold uk-margin-medium-bottom">Мы в instagram</h3>
+                            <div class="uk-position-top-right uk-overlay">
+                                <img src="content/block/insta/insta_icon.png" alt="">
+                            </div>
+                            <div class="uk-child-width-1-3 uk-grid-small" uk-grid>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                                <div uk-lightbox><a href="content/block/insta/315485007.jpg"><img
+                                            src="content/block/insta/315485007.jpg" alt=""></a></div>
+                            </div>
+                            <a class="uk-button uk-button-default TBButton uk-margin-medium-top"
+                                href="#">Подписаться</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div uk-slider>
+                    <div class="HomeH2 uk-flex-middle uk-padding-large uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right"
+                        uk-grid>
+                        <div class="uk-width-expand">
+                            <h2 class="uk-h1 uk-text-bolder">Новости / Статьи</h2>
+                        </div>
+                        <div class="uk-width-auto uk-visible@m">
+                            <div class="HomeH2Slidenav uk-background-secondary">
+                                <button uk-slidenav-previous uk-slider-item="previous"></button>
+                                <button uk-slidenav-next uk-slider-item="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-3@l uk-child-width-1-4@xl uk-margin-remove-top"
+                        uk-grid uk-height-match="target: > div > .uk-card">
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <img src="content/block/news/55017204_6.jpg" alt="" style="border-radius: 10px;">
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Название
+                                        новости
+                                    </h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <img src="content/block/news/55017204_6.jpg" alt="" style="border-radius: 10px;">
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Название
+                                        новости
+                                    </h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <img src="content/block/news/55017204_6.jpg" alt="" style="border-radius: 10px;">
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Название
+                                        новости
+                                    </h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <img src="content/block/news/55017204_6.jpg" alt="" style="border-radius: 10px;">
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Название
+                                        новости
+                                    </h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <img src="content/block/news/55017204_6.jpg" alt="" style="border-radius: 10px;">
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Название
+                                        новости
+                                    </h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div uk-slider>
+                    <div class="HomeH2 uk-flex-middle uk-padding-large uk-padding-remove-left uk-padding-remove-right"
+                        uk-grid>
+                        <div class="uk-width-expand">
+                            <h2 class="uk-h1 uk-text-bolder">Отзывы о магазине</h2>
+                        </div>
+                        <div class="uk-width-auto uk-visible@m">
+                            <div class="HomeH2Slidenav uk-background-secondary">
+                                <button uk-slidenav-previous uk-slider-item="previous"></button>
+                                <button uk-slidenav-next uk-slider-item="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-slider-items uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-remove-top" uk-grid
+                        uk-height-match="target: > div > .uk-card">
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <ion-icon class="uk-text-primary" name="quote" size="large"></ion-icon>
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Имя</h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <ion-icon class="uk-text-primary" name="quote" size="large"></ion-icon>
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Имя</h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <ion-icon class="uk-text-primary" name="quote" size="large"></ion-icon>
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Имя</h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-body">
+                                    <ion-icon class="uk-text-primary" name="quote" size="large"></ion-icon>
+                                    <p class="uk-text-small uk-margin-remove-bottom">00.00.0000</p>
+                                    <h3 class="uk-card-title uk-margin-remove-top uk-text-lighter">Имя</h3>
+                                    <p class="uk-text-emphasis">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor
+                                        incididunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="uk-margin-xlarge-top uk-margin-xlarge-bottom" uk-grid
+                    uk-height-match="target: > div > div">
+                    <div class="uk-width-expand">
+                        <div class="uk-padding uk-background-default uk-border-rounded">
+                            <div class="uk-child-width-1-2@m uk-child-width-1-4@xl" uk-grid>
+                                <div>
+                                    <h4 class="uk-margin-small-bottom uk-h3 uk-text-emphasis uk-text-bold">Все в дом
+                                    </h4>
+                                    <h5 class="uk-margin-remove-top uk-text-muted">Магазин мебели</h5>
+                                </div>
+                                <div>
+                                    <ul class="uk-nav uk-nav-default">
+                                        <li><a href="#">Главная</a></li>
+                                        <li><a href="#">О компании</a></li>
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Оплата</a></li>
+                                        <li><a href="#">Доставка</a></li>
+                                        <li><a href="#">Отзывы</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="uk-margin-medium-bottom uk-h3 uk-text-emphasis uk-text-bold">Контакты
+                                    </h4>
+                                    <a href="tel:+74812390987"
+                                        class="uk-h4 uk-margin-remove-bottom uk-text-bolder uk-link-reset">+7 (4812)
+                                        39-09-87</a>
+                                    <div>г. Пенза, ул. Ватутина, 105а</div>
+                                </div>
+                                <div>
+                                    <h4 class="uk-margin-medium-bottom uk-h3 uk-text-emphasis uk-text-bold">Принимаем к
+                                        оплате</h4>
+                                    <ul class="uk-iconnav">
+                                        <li><img src="content/pay/visa.svg" alt=""></li>
+                                        <li><img src="content/pay/m-card_1.svg" alt=""></li>
+                                        <li><img src="content/pay/mir_1.svg" alt=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="uk-margin-top">© 2021 dostavka-mebel-shop.ru</div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-3@l uk-width-1-4@xl">
+                        <div class="Newsletter uk-inline uk-padding uk-background-secondary uk-border-rounded WText">
+                            <h4 class="uk-margin-medium-bottom uk-h3 uk-text-bold WText">Подпишитесь на рассылку!</h4>
+                            <div class="uk-position-top-right uk-overlay">
+                                <ion-icon class="WText" name="at" size="large"></ion-icon>
+                            </div>
+                            <div class="uk-inline">
+                                <a class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: check"></a>
+                                <input class="uk-input TInput" type="text" placeholder="Email">
+                            </div>
+                            <div class="uk-margin-top">
+                                <label><input class="uk-checkbox uk-margin-small-right" type="checkbox">Я согласен на
+                                    обработку моих <a href="">персональных данных</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/uikit@3.6.14/dist/js/uikit.min.js"></script>
+    <script src="https://unpkg.com/uikit@3.6.14/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>

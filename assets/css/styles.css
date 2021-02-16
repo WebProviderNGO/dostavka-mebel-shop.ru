@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+html {
+    --ColorSecondary: #0058AB;
+    --ColorSecondaryHover: #024a8d;
+    --ColorTSecondary: rgba(0, 88, 171, 0.25);
+    --ColorDanger: #FBD914;
+    --Radius10: 10px;
+    --Radius15: 15px;
+    --Radius20: 20px;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+body,
+h1,
+.uk-h1,
+header .uk-h4,
+.uk-card-default .uk-card-title,
+.ProductCard .uk-text-bold {
+    color: black;
+}
+
+.Logo h1 {
+    font-size: 1.5rem;
+}
+
+.Logo h2 {
+    font-size: 1.15rem;
+}
+
+.SecondaryButton,
+.TBButton,
+.TWButton {
+    border: none;
+    border-radius: var(--Radius10);
+    font-weight: 700;
+}
+
+.TopDrop,
+.WText,
+.SecondaryButton,
+.SecondaryButton:focus,
+.SecondaryButton:hover,
+.TWButton,
+.TWButton:focus,
+.TWButton:hover {
+    color: white !important;
+}
+
+.SecondaryButton {
+    background-color: var(--ColorSecondary);
+}
+
+.SecondaryButton:focus,
+.SecondaryButton:hover {
+    background-color: var(--ColorSecondaryHover);
+}
+
+.TWButton {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.TWButton:focus,
+.TWButton:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.TBButton,
+.TBButton:focus,
+.TBButton:hover {
+    color: black;
+}
+
+.TBButton {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.TBButton:focus,
+.TBButton:hover {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.BannerProduct small {
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--Radius10);
+    font-weight: 700;
+    color: white;
+}
+
+/* Слайдер товара */
+
+.HomeH2Slidenav {
+    padding: 7px;
+    border-radius: var(--Radius15);
+}
+
+.HomeH2 .uk-slidenav {
+    height: 40px;
+    width: 40px;
+    padding: 7px;
+    color: white;
+}
+
+.HomeH2 .uk-slidenav:focus,
+.HomeH2 .uk-slidenav:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--Radius10);
+}
+
+/* /Слайдер товара */
+
+.ProductCard,
+.ProductCard img,
+.ProductCard .uk-overlay-primary,
+.ProductCardBorderradius {
+    border-radius: 20px;
+}
+
+.ProductCard .uk-overlay-primary {
+    z-index: 0;
+}
+
+.ProductCardBorderradius {
+    position: relative;
+    top: -50px;
+    z-index: 10;
+    background-color: white;
+}
+
+.ProductCardNumber .uk-button,
+.ProductCardNumber .uk-input {
+    width: 26px;
+    height: 26px;
+    color: black;
+    font-size: 1rem;
+}
+
+.ProductCardNumber .uk-padding-small {
+    padding: 3px;
+}
+
+.ProductCardNumber .uk-button {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.ProductCardNumber .uk-input {
+    background: transparent;
+    border: none;
+}
+
+.ProductCard .uk-card-footer,
+.ProductCard .uk-card-header {
+    border: 0;
+}
+
+.ProductCard .uk-badge ion-icon {
+    margin-right: 7px;
+}
+
+.ProductCardBadge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 5;
+}
+
+.ProductCard .uk-badge {
+    font-size: .8rem;
+}
+
+.YesBadge {
+    background: var(--ColorSecondary) !important;
+}
+
+.SaleBadge {
+    background: var(--ColorDanger) !important;
+}
+
+.NewBadge {
+    background: #32b9b9 !important;
+}
+
+.CardInfo {
+    height: 220px;
+}
+
+.CardInfo .uk-card-title,
+.AboutCard .uk-card-title {
+    font-size: 3rem;
+}
+
+.Xbadge {
+    font-size: 1rem !important;
+    padding: 21px !important;
+}
+
+footer .uk-nav-default>li>a:focus,
+footer .uk-nav-default>li>a:hover {
+    color: black;
+}
+
+.TInput,
+.uk-offcanvas-bar .uk-input {
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: var(--Radius10);
+}
+
+.TInput:hover,
+.TInput:focus,
+.uk-offcanvas-bar .uk-input:hover,
+.uk-offcanvas-bar .uk-input:focus {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.TInput,
+.TInput::placeholder,
+.uk-offcanvas-bar .uk-input,
+.uk-offcanvas-bar .uk-input::placeholder {
+    color: white !important;
+}
+
+.Newsletter .uk-checkbox {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.Newsletter .uk-checkbox:checked:focus,
+.Newsletter .uk-checkbox:checked:checked {
+    background-color: var(--ColorDanger);
+}
+
+.Newsletter a {
+    text-decoration: underline;
+    color: white;
+}
+
+.Newsletter .uk-form-icon:hover,
+.Newsletter a:hover {
+    color: var(--ColorDanger);
+}
+
+#CatalogOffcanvas .uk-button{
+    text-transform: none;
+}
+
+.CatalogOffcanvas-MainMenu {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: var(--Radius10);
+}
+
+.CatalogOffcanvas-MainMenu a {
+    color: white !important;
+}
